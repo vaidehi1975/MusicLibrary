@@ -1,0 +1,81 @@
+<html>
+<head>
+    <link rel="stylesheet" href="login.css"/>
+    <script>
+        function check_login()
+
+        {
+        alert("1");
+        try {
+            var cn = new ActiveX("ADODB.Recordset");
+        } catch (error) {
+            alert(error);
+        }
+             
+            alert("1");
+var strConn = 'dsn=musiclibrary';  
+var rs = new ActiveXObject('ADODB.Recordset'); 
+c.open(strConn);
+rs.open("Select * from User_table where userid='kulkvaia' and pass='1234'");
+if(rs.eof==true)
+{
+    alert("user does not exists");
+}
+    else
+    {
+        alert("Hurray");
+}
+        };
+
+    </script>
+</head>
+<body>
+    <div id="imageheading">
+       
+    <image src="musicimage.jpg"/>
+   
+   <h2> Montclaire Early</h2>
+            
+</div>
+<center>
+    <div id="top1">
+        <h1>Login Page</h1>
+    </div>
+<div>
+    <br>
+    <br>
+    <table>
+        <tr height="100px">
+            <Td>
+               <h3> Enter User id</h3>
+            </Td>
+            <td>
+                <input type="text" class="txtlogin" id="txtuserid"/>
+            </td>
+
+        </tr>
+        <tr height="100px">
+            <Td>
+               <h3>Enter Password</h3>
+            </Td>
+            <td>
+                <input class="txtlogin" type="password" id="txtpass"/>
+            </td>
+            <tr height="80px">
+                <Td >
+                    
+                        <button class="btn" id="btnlogin" onclick="check_login();">Login</button>
+                
+                    
+                </Td>
+                <td>
+                    <button class="btn"  id="btnback">Exit</button>
+                </td>
+                
+            </tr> 
+        </tr>
+    </table>
+</div>
+</center>
+</body>
+</html>
